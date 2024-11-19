@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html id="theDocument">
-	<head>
+
+<head>
 	<title>Fletcher Bach - CV</title>
 
-	<meta name="viewport" content="width=device-width"/>
-	<meta name="description" content="Curriculum Vitae of Fletcher Bach."/>
-	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width" />
+	<meta name="description" content="Curriculum Vitae of Fletcher Bach." />
+	<meta charset="UTF-8">
 
 	<link rel="icon" href="/favicon.png" type="image/x-icon" />
 	<!-- <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" /> -->
@@ -17,324 +18,422 @@
 
 	<script>
 		function darkToggle() {
-		    var checkBox = document.getElementById("dmToggle");
-		    var theDocument = document.getElementById("theDocument");
-		    let toggleText = document.getElementById("toggleText");
+			var checkBox = document.getElementById("dmToggle");
+			var theDocument = document.getElementById("theDocument");
+			let toggleText = document.getElementById("toggleText");
 
-			  if (checkBox.checked == true){
-			    // add class "darkMode" to html
-			    addClass(theDocument, 'darkMode');
-			    toggleText.innerHTML="Light Mode";
-			  } else {
-			    // add class "darkMode" to html 
-			    removeClass(theDocument, 'darkMode');
-			    toggleText.innerHTML="Dark Mode";
-			  }
+			if (checkBox.checked == true) {
+				// add class "darkMode" to html
+				addClass(theDocument, 'darkMode');
+				toggleText.innerHTML = "Light Mode";
+			} else {
+				// add class "darkMode" to html 
+				removeClass(theDocument, 'darkMode');
+				toggleText.innerHTML = "Dark Mode";
+			}
 		}
 
-		function hasClass(ele,cls) {
-			  return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-			}
+		function hasClass(ele, cls) {
+			return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+		}
 
-			function addClass(ele,cls) {
-			  if (!hasClass(ele,cls)) ele.className += ""+cls;
-			}
+		function addClass(ele, cls) {
+			if (!hasClass(ele, cls)) ele.className += "" + cls;
+		}
 
-			function removeClass(ele,cls) {
-			  if (hasClass(ele,cls)) {
-			    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-			    ele.className=ele.className.replace(reg,'');
-			  }
+		function removeClass(ele, cls) {
+			if (hasClass(ele, cls)) {
+				var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+				ele.className = ele.className.replace(reg, '');
+			}
 		}
 	</script>
-	</head>
-	<body id="top">
-		<div id="cv" class="instaFade">
-			<div class="mainDetails">
-				<div id="headshot" class="quickFade">
-					<img src="img.jpg" alt="Fletcher Bach" />
+</head>
+
+<body id="top">
+	<div id="cv" class="instaFade">
+		<div class="mainDetails">
+			<div id="headshot" class="quickFade">
+				<img src="img.jpg" alt="Fletcher Bach" />
+			</div>
+
+			<div id="name">
+				<h1 class="quickFade delayTwo">Fletcher Bach</h1>
+				<h2 class="quickFade delayThree">Engineer // Artist</h2>
+			</div>
+
+			<div id="contactDetails" class="quickFade delayFour">
+				<ul>
+					<li>w: <a href="http://fletcherbach.com">fletcherbach.com</a></li>
+					<li>e: <a href="mailto:fhbach@gmail.com" target="_blank">fhbach@gmail.com</a></li>
+					<li>qrz: K4PUT</li>
+					<li>🌐: Berlin, DE</li>
+				</ul>
+				<br><br>
+				<div class="dmContainer">
+					<span id="toggleText">Dark Mode</span>
+					<label class="switch">
+						<input id="dmToggle" type="checkbox" onclick="darkToggle()">
+						<span class="slider round"></span>
+					</label>
 				</div>
-				
-				<div id="name">
-					<h1 class="quickFade delayTwo">Fletcher Bach</h1>
-					<h2 class="quickFade delayThree">Engineer // Artist</h2>
-				</div>
-				
-				<div id="contactDetails" class="quickFade delayFour">
-					<ul>
-					    <li>w: <a href="http://fletcherbach.com">fletcherbach.com</a></li>
-						<li>e: <a href="mailto:fhbach@gmail.com" target="_blank">fhbach@gmail.com</a></li>
-						<li>qrz: K4PUT</li>
-						<li>🌐: Berlin, DE</li>
-					</ul>
-					<br><br>
-					<div class="dmContainer">
-						<span id="toggleText">Dark Mode</span>
-						<label class="switch">
-		  					<input id="dmToggle" type="checkbox" onclick="darkToggle()">
-		  						<span class="slider round"></span>
-						</label>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="mainArea" class="quickFade delayFive">
+			<section>
+				<article>
+					<div class="sectionTitle">
+						<h1>About</h1>
 					</div>
 
+					<div class="sectionContent">
+						<p>Fletcher builds objects and systems that investigate the social, historical, and
+							environmental implications of data, hardware, and computation. His work has been featured in
+							Fast Company, Hacker News, Forbes, Make, Parabolic Arc, and Vice’s Motherboard. He is
+							part-time faculty at RISD and a Studio Grantee at the Vermont Studio Center.</p>
+					</div>
+				</article>
+				<div class="clear"></div>
+			</section>
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Education</h1>
+				</div>
+
+				<div class="sectionContent">
+					<article>
+						<h2>New York University | ITP</h2>
+						<p class="subDetails">MPS - 2015</p>
+						<p></p>
+					</article>
+
+					<article>
+						<h2>University of Vermont | Anthropology</h2>
+						<p class="subDetails">BA - 2009</p>
+						<p></p>
+					</article>
+
+					<article>
+						<h2>Goethe Institut - München, DE | German Language Intensive</h2>
+						<p class="subDetails">Summer 2005</p>
+						<p></p>
+					</article>
 				</div>
 				<div class="clear"></div>
-			</div>
-			
-			<div id="mainArea" class="quickFade delayFive">
-				<section>
+			</section>
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Teaching</h1>
+				</div>
+
+				<div class="sectionContent">
+
 					<article>
-						<div class="sectionTitle">
-							<h1>About</h1>
-						</div>
-						
-						<div class="sectionContent">
-							<p>Fletcher builds objects and systems that investigate the social, historical, and environmental implications of data, hardware, and computation. His work has been featured in Fast Company, Hacker News, Forbes, Make, Parabolic Arc, and Vice’s Motherboard. He is part-time faculty at RISD and a Studio Grantee at the Vermont Studio Center.</p>
-						</div>
+						<h2>Introduction to Computation CTC-1000 | <a class="noLink"
+								href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails"><a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-INTRODUCTION-TO-COMPUTATION-SPRING-2023">Spring
+								2023</a>, <a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-INTRODUCTION-TO-COMPUTATION-SPRING-2022">Spring
+								2022</a>, <a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-INTRODUCTION-TO-COMPUTATION-SPRING-2021">Spring
+								2021</a>, <a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-INTRODUCTION-TO-COMPUTATION-SPRING-2020">Spring
+								2020</a>, <a class="noLink"
+								href="https://www.are.na/fletcher-bach/introduction-to-computation-ctc-1000-winter-2018">Winter
+								2018</a></p>
+						<p>Computation, Technology, and Culture: Introduction to Computation. This course teaches
+							computational techniques, methods, and key concepts in the contexts of art and design.</p>
 					</article>
-					<div class="clear"></div>
-				</section>
-				
-				<section>
-					<div class="sectionTitle">
-						<h1>Education</h1>
-					</div>
-					
-					<div class="sectionContent">
-						<article>
-							<h2>New York University | ITP</h2>
-							<p class="subDetails">MPS - 2015</p>
-							<p></p>
-						</article>
-						
-						<article>
-							<h2>University of Vermont | Anthropology</h2>
-							<p class="subDetails">BA - 2009</p>
-							<p></p>
-						</article>
 
-						<article>
-							<h2>Goethe Institut - München, DE | German Language Intensive</h2>
-							<p class="subDetails">Summer 2005</p>
-							<p></p>
-						</article>
-					</div>
-					<div class="clear"></div>
-				</section>
+					<article>
+						<h2>Studio Seminar 3 DM-7108 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Fall 2022</p>
+						<p>The course supports the exploration of theoretical, social, material, technical, and
+							contextual research and concerns in new media arts practice during the final year of the <a
+								class="noLink" href="https://dm.risd.edu/">DM MFA Program</a>. It is a combined studio
+							and seminar forum for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a>
+							second-year students. The course is a mix of individual meetings, group discussions and
+							group critiques.</p>
+					</article>
 
-				<section>
-					<div class="sectionTitle">
-						<h1>Teaching</h1>
-					</div>
-					
-					<div class="sectionContent">
+					<article>
+						<h2>Ambient Interfaces DM-2000 // CTC-2000 | <a class="noLink"
+								href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails"><a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-AMBIENT-INTERFACES-FALL-2022">Fall
+								2022</a>, <a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-AMBIENT-INTERFACES-FALL-2021">Fall
+								2021</a>, <a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-AMBIENT-INTERFACES-FALL-2020">Fall 2020</a>
+						</p>
+						<p><b>Ambient Interfaces</b> is a both a practical and theoretical exploration of electronic
+							sensors, processors, and actuators in the context of interactive art and design.</p>
+					</article>
 
-						<article>
-							<h2>Introduction to Computation CTC-1000 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails"><a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-INTRODUCTION-TO-COMPUTATION-SPRING-2023">Spring 2023</a>, <a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-INTRODUCTION-TO-COMPUTATION-SPRING-2022">Spring 2022</a>, <a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-INTRODUCTION-TO-COMPUTATION-SPRING-2021">Spring 2021</a>, <a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-INTRODUCTION-TO-COMPUTATION-SPRING-2020">Spring 2020</a>, <a class="noLink" href="https://www.are.na/fletcher-bach/introduction-to-computation-ctc-1000-winter-2018">Winter 2018</a></p>
-							<p>Computation, Technology, and Culture: Introduction to Computation. This course teaches computational techniques, methods, and key concepts in the contexts of art and design.</p>
-						</article>
+					<article>
+						<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Fall 2022</p>
+						<p>With <a class="noLink" href="https://saeohooviii.com/">Sae Oh</a> in the <a class="noLink"
+								href="https://dm.risd.edu/">Digital + Media MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Studio Seminar 3 DM-7108 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Fall 2022</p>
-							<p>The course supports the exploration of theoretical, social, material, technical, and contextual research and concerns in new media arts practice during the final year of the <a class="noLink" href="https://dm.risd.edu/">DM MFA Program</a>. It is a combined studio and seminar forum for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> second-year students. The course is a mix of individual meetings, group discussions and group critiques.</p>
-						</article>
+					<article>
+						<h2>Studio Seminar 2 DM-7102 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails"><a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-D-M-GRAD-STUDIO-SEMINAR-2-SPRING-2022">Spring
+								2022</a></p>
+						<p>This combined studio and seminar forum supports <a class="noLink"
+								href="https://dm.risd.edu/">Digital + Media</a> graduate students as they research and
+							develop the theoretical, social, material, technical, and contextual aspects of their
+							emergent arts practices. Co-taught with <a class="noLink"
+								href="https://marielayeregui.com/">Mariela Yeregui</a>.</p>
+					</article>
 
-						<article>
-							<h2>Ambient Interfaces DM-2000 // CTC-2000 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails"><a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-AMBIENT-INTERFACES-FALL-2022">Fall 2022</a>, <a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-AMBIENT-INTERFACES-FALL-2021">Fall 2021</a>, <a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-AMBIENT-INTERFACES-FALL-2020">Fall 2020</a></p>
-							<p><b>Ambient Interfaces</b> is a both a practical and theoretical exploration of electronic sensors, processors, and actuators in the context of interactive art and design.</p>
-						</article>
+					<article>
+						<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2022</p>
+						<p>With <a class="noLink" href="https://www.mia-rollins.com/">Mia Rollins</a> in the <a
+								class="noLink" href="https://www.risd.edu/academics/sculpture">Sculpture MFA
+								Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Fall 2022</p>
-							<p>With <a class="noLink" href="https://saeohooviii.com/">Sae Oh</a> in the <a class="noLink" href="https://dm.risd.edu/">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Wintersession 2022</p>
+						<p>With <a class="noLink" href="https://www.aaronwright.co/">Aaron Wright</a> in the <a
+								class="noLink" href="https://www.risd.edu/academics/industrial-design">Industrial Design
+								MID Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Studio Seminar 2 DM-7102 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails"><a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-D-M-GRAD-STUDIO-SEMINAR-2-SPRING-2022">Spring 2022</a></p>
-							<p>This combined studio and seminar forum supports <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> graduate students as they research and develop the theoretical, social, material, technical, and contextual aspects of their emergent arts practices. Co-taught with <a class="noLink" href="https://marielayeregui.com/">Mariela Yeregui</a>.</p>
-						</article>
+					<h2>Code As Medium DM-2132 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+					<p class="subDetails"><a class="noLink"
+							href="https://fletcherbach.com/TEACHING/RISD-CODE-AS-MEDIUM-FALL-2021">Fall 2021</a> <a
+							class="noLink" href="https://fletcherbach.com/TEACHING/RISD-CODE-AS-MEDIUM-FALL-2020">Fall
+							2020</a></p>
+					<p><b>Code as Medium</b> explores the technical and conceptual fundamentals of computer programming
+						in the broader context of a sustained studio practice. In addition to teaching basic software
+						coding skills, the course focuses on the social and historical underpinnings of these
+						technologies. It is an elective in the <a class="noLink" href="https://dm.risd.edu/">Digital +
+							Media MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2022</p>
-							<p>With <a class="noLink" href="https://www.mia-rollins.com/">Mia Rollins</a> in the <a class="noLink" href="https://www.risd.edu/academics/sculpture">Sculpture MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Interdisciplinary Critique CTC-3002 | <a class="noLink"
+								href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails"><a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-INTERDISCIPLINARY-CRITIQUE-SPRING-2021">Spring
+								2021</a>, <a class="noLink"
+								href="https://fletcherbach.com/TEACHING/RISD-INTERDISCIPLINARY-CRITIQUE-SPRING-2020">Spring
+								2020</a></p>
+						<p><b>Computation, Technology, and Culture: Interdisciplinary Critique</b>. In this course,
+							students develop and complete a large-scale independent project.</p>
+					</article>
 
-						<article>
-							<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Wintersession 2022</p>
-							<p>With <a class="noLink" href="https://www.aaronwright.co/">Aaron Wright</a> in the <a class="noLink" href="https://www.risd.edu/academics/industrial-design">Industrial Design MID Program</a>.</p>
-						</article>
+					<article>
+						<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2021</p>
+						<p>With <a class="noLink" href="http://www.hannahsuzanna.com/the-altar-and-the-grave">Hannah
+								Suzanna</a> in the <a class="noLink" href="https://dm.risd.edu/">Digital + Media MFA
+								Program</a>.</p>
+					</article>
 
-						<h2>Code As Medium DM-2132 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails"><a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-CODE-AS-MEDIUM-FALL-2021">Fall 2021</a> <a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-CODE-AS-MEDIUM-FALL-2020">Fall 2020</a></p>
-							<p><b>Code as Medium</b> explores the technical and conceptual fundamentals of computer programming in the broader context of a sustained studio practice. In addition to teaching basic software coding skills, the course focuses on the social and historical underpinnings of these technologies. It is an elective in the <a class="noLink" href="https://dm.risd.edu/">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Winteresssion 2021</p>
+						<p>With <a class="noLink" href="https://www.travesssmalley.com/">Travess Smalley</a> in the <a
+								class="noLink" href="https://dm.risd.edu/">Digital + Media MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Interdisciplinary Critique CTC-3002 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails"><a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-INTERDISCIPLINARY-CRITIQUE-SPRING-2021">Spring 2021</a>, <a class="noLink" href="https://fletcherbach.com/TEACHING/RISD-INTERDISCIPLINARY-CRITIQUE-SPRING-2020">Spring 2020</a></p>
-							<p><b>Computation, Technology, and Culture: Interdisciplinary Critique</b>. In this course, students develop and complete a large-scale independent project.</p>
-						</article>
-						
-						<article>
-							<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2021</p>
-							<p>With <a class="noLink" href="http://www.hannahsuzanna.com/the-altar-and-the-grave">Hannah Suzanna</a> in the <a class="noLink" href="https://dm.risd.edu/">Digital + Media MFA Program</a>.</p>
-						</article>
 
-						<article>
-							<h2>Independent Study Project | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Winteresssion 2021</p>
-							<p>With <a class="noLink" href="https://www.travesssmalley.com/">Travess Smalley</a> in the <a class="noLink" href="https://dm.risd.edu/">Digital + Media MFA Program</a>.</p>
-						</article>
-						
-					
-						<article>
-							<h2>CTC Seminar CTC-3001 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Fall 2020</p>
-							<p><b>Computation, Technology, and Culture: Seminar</b>. In this course, students develop and complete a large-scale project that draws from the students' prior studies in the CTC Concentration. Students write source code, author software, and program hardware for making their own works of art and design.</p>
-						</article>
-						
-						<article>
-							<h2>Researcher | <a class="noLink" href="https://tisch.nyu.edu/itp">NYU ITP</a></h2>
-							<p class="subDetails">Fall 2014</p>
-							<p>Co-taught Spring 2014 semester of Flying Robotic Journalism at ITP. Conducted pilot training sessions, lectured, and modified and maintained drones and associated equipment.</p>
-						</article>
-					</div>
-					<div class="clear"></div>
-				</section>
-				
-				<section>
-					<div class="sectionTitle">
-						<h1>Work</h1> 
-					</div>
-					
-					<div class="sectionContent">
-						<article>
-							<h2>Hardware Engineer | <a class="noLink" href="https://www.rockwellgroup.com/lab">LAB at Rockwell Group</a></h2>
-							<p class="subDetails">January 2023 - Present</p>
-							<p>Hardware design and engineering for large-scale interactive physical sculpture. Installing winter 2025.</p>
-						</article>
-						<article>
-							<h2>Technology Consultant | <a class="noLink" href="http://clementvalla.com/">Clement Valla</a></h2>
-							<p class="subDetails">July, November 2021</p>
-							<p class="subDetails">August, September 2022</p>
-							<p>Installation version of Valla's <a class="noLink" href="http://www.pointcloud.garden/">pointcloud.garden</a> body of work for exhibitions in Shanghai, San Francisco, and Istanbul.</p>
-						</article>
-						<article>
-							<h2>Technical Consultant |  <a class="noLink" href="https://www.risd.edu/news/stories/risd-hyundai-partnership-explores-adaptive-ecologies">RISD-Hyundai Research Collaborative</a></h2>
-							<p class="subDetails">June, July 2022</p>
-							<p>Working with researchers from RISD and Hyundai Design on future-focused, bioinspired prototypes.</p>
-						</article>
-						<article>
-							<h2>Installation Support |  <a class="noLink" href="https://publications.risdmuseum.org/grad-show-2022">RISD Grad Show 2022</a></h2>
-							<p class="subDetails">March - May 2022</p>
-							<p></p>
-						</article>
-						<article>
-							<h2>Interaction Design Consultant | <a class="noLink" href="https://www.bigdreams.studio/">Big Dreams</a></h2>
-							<p class="subDetails">February 2022</p>
-							<p></p>
-						</article>
-						<!-- <article>
+					<article>
+						<h2>CTC Seminar CTC-3001 | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Fall 2020</p>
+						<p><b>Computation, Technology, and Culture: Seminar</b>. In this course, students develop and
+							complete a large-scale project that draws from the students' prior studies in the CTC
+							Concentration. Students write source code, author software, and program hardware for making
+							their own works of art and design.</p>
+					</article>
+
+					<article>
+						<h2>Researcher | <a class="noLink" href="https://tisch.nyu.edu/itp">NYU ITP</a></h2>
+						<p class="subDetails">Fall 2014</p>
+						<p>Co-taught Spring 2014 semester of Flying Robotic Journalism at ITP. Conducted pilot training
+							sessions, lectured, and modified and maintained drones and associated equipment.</p>
+					</article>
+				</div>
+				<div class="clear"></div>
+			</section>
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Work</h1>
+				</div>
+
+				<div class="sectionContent">
+					<article>
+						<h2>Hardware Engineer | <a class="noLink" href="https://www.rockwellgroup.com/lab">LAB at
+								Rockwell Group</a></h2>
+						<p class="subDetails">January 2023 - Present</p>
+						<p>Hardware design and engineering for large-scale interactive physical sculpture. Installing
+							winter 2025.</p>
+					</article>
+					<article>
+						<h2>Technology Consultant | <a class="noLink" href="http://clementvalla.com/">Clement Valla</a>
+						</h2>
+						<p class="subDetails">July, November 2021</p>
+						<p class="subDetails">August, September 2022</p>
+						<p>Installation version of Valla's <a class="noLink"
+								href="http://www.pointcloud.garden/">pointcloud.garden</a> body of work for exhibitions
+							in Shanghai, San Francisco, and Istanbul.</p>
+					</article>
+					<article>
+						<h2>Technical Consultant | <a class="noLink"
+								href="https://www.risd.edu/news/stories/risd-hyundai-partnership-explores-adaptive-ecologies">RISD-Hyundai
+								Research Collaborative</a></h2>
+						<p class="subDetails">June, July 2022</p>
+						<p>Working with researchers from RISD and Hyundai Design on future-focused, bioinspired
+							prototypes.</p>
+					</article>
+					<article>
+						<h2>Installation Support | <a class="noLink"
+								href="https://publications.risdmuseum.org/grad-show-2022">RISD Grad Show 2022</a></h2>
+						<p class="subDetails">March - May 2022</p>
+						<p></p>
+					</article>
+					<article>
+						<h2>Interaction Design Consultant | <a class="noLink" href="https://www.bigdreams.studio/">Big
+								Dreams</a></h2>
+						<p class="subDetails">February 2022</p>
+						<p></p>
+					</article>
+					<!-- <article>
 							<h2>Engineer | <a class="noLink" href="https://smooth.technology/">Smooth Technology</a></h2>
 							<p class="subDetails">Ongoing</p>
 							<p>Laurie Anderson details here</p>
 						</article> -->
-						<article>
-							<h2>Engineer | <a class="noLink" href="https://smooth.technology/">Smooth Technology</a></h2>
-							<p class="subDetails">September, October 2019</p>
-							<p>Interactive installation for The New York Times and Amazon Streaming's popup <a class="noLink" href="http://fletcherbach.com/MUSEUM-OF-MODERN-LOVE">Museum of Modern Love.</a> </p>
-						</article>
-						<!-- <article>
+					<article>
+						<h2>Engineer | <a class="noLink" href="https://smooth.technology/">Smooth Technology</a></h2>
+						<p class="subDetails">September, October 2019</p>
+						<p>Interactive installation for The New York Times and Amazon Streaming's popup <a
+								class="noLink" href="http://fletcherbach.com/MUSEUM-OF-MODERN-LOVE">Museum of Modern
+								Love.</a> </p>
+					</article>
+					<!-- <article>
 							<h2>Engineer | <a class="noLink" href="https://smooth.technology/">Smooth Technology</a></h2>
 							<p class="subDetails">July 2019 - February 2020</p>
 							<p>escape the room details go here</p>
 						</article> -->
-						<article>
-							<h2>Fabricator | <a class="noLink" href="https://smooth.technology/">Smooth Technology</a></h2>
-							<p class="subDetails">June 2019</p>
-							<p>Custom LED panel production and testing for <a class="noLink" href="https://fletcherbach.com/FILA-EXPLORE-POPUP">FILA's Explore popup in SOHO, NYC.</a></p>
-						</article>
-						<article>
-							<h2>Developer | <a class="noLink" href="https://wearesubrosa.com/">Sub Rosa</a></h2>
-							<p class="subDetails">May 2019</p>
-							<p>Interactive environmental light and sound installation for <a class="noLink" href="https://fletcherbach.com/BULLEIT-MULTISENSORY-TASTING-EXPERIENCE">Bulleit's tasting rooms<a/> in Kentucky, USA.</p>
-						</article>
-						<article>
-							<h2>Technologist | <a class="noLink" href="http://www.tellart.com/">Tellart</a></h2>
-							<p class="subDetails">August 2018 - January 2019</p>
-							<p>Systems architecture and backend development for <a class="noLink" href="https://alitaexperience.com/">Alita Immersive Experience</a>. Javascript with Meteor framework, MongoDB, Raspberry Pi, Apache webserver, Arduino.</p>
-						</article>
-						<article>
-							<h2>Technologist | <a class="noLink" href="http://www.tellart.com/">Tellart</a></h2>
-							<p class="subDetails">May 2018 - August 2018</p>
-							<p>Circuit design and firmware development for underwater robotics application.</p>
-						</article>
-						<article>
-							<h2>Technologist | <a class="noLink" href="http://www.tellart.com/">Tellart</a></h2>
-							<p class="subDetails">October 2017 - January 2018</p>
-							<p>Design, development, installation for <a class="noLink" href="https://news.samsung.com/global/samsung-olympic-showcase-part-1-innovation-on-display-at-unbox-samsung">Samsung's Unbox Pavillion</a> at the XXIII Olympic Winter Games in Gangueng, South Korea.</p>
-						</article>
-						<article>
-							<h2>Engineer | <a class="noLink" href="https://octopd.com/">OCTOpd</a></h2>
-							<p class="subDetails">September 2017, March 2018, April - May 2018</p>
-							<p>Hardware and Software development of working, physically interactive protoypes. Raspberry pi, Cinder, OpenCV.</p>
-						</article>
+					<article>
+						<h2>Fabricator | <a class="noLink" href="https://smooth.technology/">Smooth Technology</a></h2>
+						<p class="subDetails">June 2019</p>
+						<p>Custom LED panel production and testing for <a class="noLink"
+								href="https://fletcherbach.com/FILA-EXPLORE-POPUP">FILA's Explore popup in SOHO,
+								NYC.</a></p>
+					</article>
+					<article>
+						<h2>Developer | <a class="noLink" href="https://wearesubrosa.com/">Sub Rosa</a></h2>
+						<p class="subDetails">May 2019</p>
+						<p>Interactive environmental light and sound installation for <a class="noLink"
+								href="https://fletcherbach.com/BULLEIT-MULTISENSORY-TASTING-EXPERIENCE">Bulleit's
+								tasting rooms<a /> in Kentucky, USA.</p>
+					</article>
+					<article>
+						<h2>Technologist | <a class="noLink" href="http://www.tellart.com/">Tellart</a></h2>
+						<p class="subDetails">August 2018 - January 2019</p>
+						<p>Systems architecture and backend development for <a class="noLink"
+								href="https://alitaexperience.com/">Alita Immersive Experience</a>. Javascript with
+							Meteor framework, MongoDB, Raspberry Pi, Apache webserver, Arduino.</p>
+					</article>
+					<article>
+						<h2>Technologist | <a class="noLink" href="http://www.tellart.com/">Tellart</a></h2>
+						<p class="subDetails">May 2018 - August 2018</p>
+						<p>Circuit design and firmware development for underwater robotics application.</p>
+					</article>
+					<article>
+						<h2>Technologist | <a class="noLink" href="http://www.tellart.com/">Tellart</a></h2>
+						<p class="subDetails">October 2017 - January 2018</p>
+						<p>Design, development, installation for <a class="noLink"
+								href="https://news.samsung.com/global/samsung-olympic-showcase-part-1-innovation-on-display-at-unbox-samsung">Samsung's
+								Unbox Pavillion</a> at the XXIII Olympic Winter Games in Gangueng, South Korea.</p>
+					</article>
+					<article>
+						<h2>Engineer | <a class="noLink" href="https://octopd.com/">OCTOpd</a></h2>
+						<p class="subDetails">September 2017, March 2018, April - May 2018</p>
+						<p>Hardware and Software development of working, physically interactive protoypes. Raspberry pi,
+							Cinder, OpenCV.</p>
+					</article>
 
-						<article>
-							<h2>Engineer | <a class="noLink" href="https://www.getinterwoven.com/our-work/remo-haptic-training/">Remo Haptics</a></h2>
-							<p class="subDetails">June 2017 - October 2017</p>
-							<p>Design and Development of hardware and software systems for performance cycling wearable device.</p>
-						</article>
+					<article>
+						<h2>Engineer | <a class="noLink"
+								href="https://www.getinterwoven.com/our-work/remo-haptic-training/">Remo Haptics</a>
+						</h2>
+						<p class="subDetails">June 2017 - October 2017</p>
+						<p>Design and Development of hardware and software systems for performance cycling wearable
+							device.</p>
+					</article>
 
-						<article>
-							<h2>Engineer | <a class="noLink" href="https://temboo.com/">Temboo</a></h2>
-							<p class="subDetails">February 2017 - June 2017</p>
-							<p>Front-end and back-end web development for user-facing and internal pages. MVC design pattern using CodeIgnitor web framework. HTML, CSS, PHP, JavaScript.</p>
-						</article>
+					<article>
+						<h2>Engineer | <a class="noLink" href="https://temboo.com/">Temboo</a></h2>
+						<p class="subDetails">February 2017 - June 2017</p>
+						<p>Front-end and back-end web development for user-facing and internal pages. MVC design pattern
+							using CodeIgnitor web framework. HTML, CSS, PHP, JavaScript.</p>
+					</article>
 
-						<article>
-							<h2>Circuit Technician | <a class="noLink" href="https://www.bioliteenergy.com/">Biolite</a></h2>
-							<p class="subDetails">January, February 2017</p>
-							<p>Assembling and testing printing circuit board prototypes for the Biolite CampStove 2 and other products and prototypes.</p>
-						</article>
+					<article>
+						<h2>Circuit Technician | <a class="noLink" href="https://www.bioliteenergy.com/">Biolite</a>
+						</h2>
+						<p class="subDetails">January, February 2017</p>
+						<p>Assembling and testing printing circuit board prototypes for the Biolite CampStove 2 and
+							other products and prototypes.</p>
+					</article>
 
-						<article>
-							<h2>Wiring, Soldering, and Installation | Artists <a class="noLink" href="http://taeyoonchoi.com/">Taeyoon Choi</a> + <a class="noLink" href="http://christinesunkim.com/">Christine Sun Kim</a></h2>
-							<p class="subDetails">November 2016</p>
-							<p>Wiring, soldering, construction, and installation for Walking Chimes, a piece by <a class="noLink" href="http://taeyoonchoi.com/">Taeyoon Choi</a> and <a class="noLink" href="http://christinesunkim.com/">Christine Sun Kim</a> that was exhibited at The Smithsonian's <a class="noLink" href="http://smithsonianapa.org/alt/">Ctrl+Alt: A Culture Lab On Imagined Futures</a>.</p>
-						</article>
+					<article>
+						<h2>Wiring, Soldering, and Installation | Artists <a class="noLink"
+								href="http://taeyoonchoi.com/">Taeyoon Choi</a> + <a class="noLink"
+								href="http://christinesunkim.com/">Christine Sun Kim</a></h2>
+						<p class="subDetails">November 2016</p>
+						<p>Wiring, soldering, construction, and installation for Walking Chimes, a piece by <a
+								class="noLink" href="http://taeyoonchoi.com/">Taeyoon Choi</a> and <a class="noLink"
+								href="http://christinesunkim.com/">Christine Sun Kim</a> that was exhibited at The
+							Smithsonian's <a class="noLink" href="http://smithsonianapa.org/alt/">Ctrl+Alt: A Culture
+								Lab On Imagined Futures</a>.</p>
+					</article>
 
-						<article>
-							<h2>Test Systems Engineer | <a class="noLink" href="http://www.finalfrontierdesign.com/">Final Frontier Design</a></h2>
-							<p class="subDetails">January 2015 - January 2017</p>
-							<p>Designing and building sensor systems for collecting, storing, and visualizing data for NASA contract space suits.</p>
-						</article>
-						
-						<article>
-							<h2>UX Designer | DBRS Innovation Labs</h2>
-							<p class="subDetails">January 2015 - November 2016</p>
-							<p>Two long-term contracts producing wireframes and designs for internal and external products with a focus on communicating AI, Machine Learning, and Data science concepts to the general public.</p>
-						</article>
+					<article>
+						<h2>Test Systems Engineer | <a class="noLink" href="http://www.finalfrontierdesign.com/">Final
+								Frontier Design</a></h2>
+						<p class="subDetails">January 2015 - January 2017</p>
+						<p>Designing and building sensor systems for collecting, storing, and visualizing data for NASA
+							contract space suits.</p>
+					</article>
 
-						<article>
-							<h2>Studio Anchor | ITP Innovation Lab</h2>
-							<p class="subDetails">Summer 2015</p>
-							<p>Served as facilitator and adviser for museum professionals from MoMA, The Metropolitan Museum, Radio Lab, and more.</p>
-						</article>
+					<article>
+						<h2>UX Designer | DBRS Innovation Labs</h2>
+						<p class="subDetails">January 2015 - November 2016</p>
+						<p>Two long-term contracts producing wireframes and designs for internal and external products
+							with a focus on communicating AI, Machine Learning, and Data science concepts to the general
+							public.</p>
+					</article>
 
-						<article>
-							<h2>Camp Counselor | <a class="noLink" href="https://itp.nyu.edu/camp2017/">ITP Camp</a></h2>
-							<p class="subDetails">Summers 2014, 2015</p>
-							<p>Led workshops and help sessions for participants.</p>
-						</article>
-						<!--
+					<article>
+						<h2>Studio Anchor | ITP Innovation Lab</h2>
+						<p class="subDetails">Summer 2015</p>
+						<p>Served as facilitator and adviser for museum professionals from MoMA, The Metropolitan
+							Museum, Radio Lab, and more.</p>
+					</article>
+
+					<article>
+						<h2>Camp Counselor | <a class="noLink" href="https://itp.nyu.edu/camp2017/">ITP Camp</a></h2>
+						<p class="subDetails">Summers 2014, 2015</p>
+						<p>Led workshops and help sessions for participants.</p>
+					</article>
+					<!--
 						<article>
 							<h2>Freelance Creative Consultant | NYC</h2>
 							<p class="subDetails">2013 - 2014</p>
@@ -342,328 +441,387 @@
 								</ul>
 						</article>
 						-->
-						<article>
-							<h2>Co-Founder | Square Nail Hops Farm</h2>
-							<p class="subDetails">2010 - 2013</p>
-							<p>Conducted grant-funded agricultural research projects in association with the USDA, Cornell University, the University of Vermont, and the Northeast Hops Alliance.</p>
-						</article>
-					</div>
-					<div class="clear"></div>
-				</section>
+					<article>
+						<h2>Co-Founder | Square Nail Hops Farm</h2>
+						<p class="subDetails">2010 - 2013</p>
+						<p>Conducted grant-funded agricultural research projects in association with the USDA, Cornell
+							University, the University of Vermont, and the Northeast Hops Alliance.</p>
+					</article>
+				</div>
+				<div class="clear"></div>
+			</section>
 
-				<section>
-					<div class="sectionTitle">
-						<h1>Thesis Advising</h1>
-					</div>
-					
-					<div class="sectionContent">
+			<section>
+				<div class="sectionTitle">
+					<h1>Thesis Advising</h1>
+				</div>
 
-						<article>
-							<h2>Thesis Mentor | <a class="noLink" href="https://www.nyu.edu/">NYU</a></h2>
-							<p class="subDetails">Spring 2024</p>
-							<p>With Elisabeth Schifrin in the <a class="noLink" href="https://itp.nyu.edu/lowres/">Interactive Media Arts Low Res program</a>.</p>
-						</article>
+				<div class="sectionContent">
 
-						<article>
-							<h2>Thesis Mentor | <a class="noLink" href="https://www.nyu.edu/">NYU</a></h2>
-							<p class="subDetails">Spring 2024</p>
-							<p>With Michelle Lee in the <a class="noLink" href="https://itp.nyu.edu/lowres/">Interactive Media Arts Low Res program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Mentor | <a class="noLink" href="https://www.nyu.edu/">NYU</a></h2>
+						<p class="subDetails">Spring 2024</p>
+						<p>With Elisabeth Schifrin in the <a class="noLink"
+								href="https://itp.nyu.edu/lowres/">Interactive Media Arts Low Res program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Mentor | <a class="noLink" href="https://www.nyu.edu/">NYU</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With Dora Do in the <a class="noLink" href="https://itp.nyu.edu/lowres/">Interactive Media Arts Low Res program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Mentor | <a class="noLink" href="https://www.nyu.edu/">NYU</a></h2>
+						<p class="subDetails">Spring 2024</p>
+						<p>With Michelle Lee in the <a class="noLink" href="https://itp.nyu.edu/lowres/">Interactive
+								Media Arts Low Res program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Mentor | <a class="noLink" href="https://www.nyu.edu/">NYU</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With Jun Shu in the <a class="noLink" href="https://itp.nyu.edu/lowres/">Interactive Media Arts Low Res program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Mentor | <a class="noLink" href="https://www.nyu.edu/">NYU</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With Dora Do in the <a class="noLink" href="https://itp.nyu.edu/lowres/">Interactive Media
+								Arts Low Res program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With <a class="noLink" href="https://saeohooviii.com/">Sae Oh</a>  in the <a class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Mentor | <a class="noLink" href="https://www.nyu.edu/">NYU</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With Jun Shu in the <a class="noLink" href="https://itp.nyu.edu/lowres/">Interactive Media
+								Arts Low Res program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With <a class="noLink" href="https://diana-sanchez.com/">Diana Sanchez</a>  in the <a class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With <a class="noLink" href="https://saeohooviii.com/">Sae Oh</a> in the <a class="noLink"
+								href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With <a class="noLink" href="https://jinhakanglab.github.io/">Jinha Kang</a> in the <a class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With <a class="noLink" href="https://diana-sanchez.com/">Diana Sanchez</a> in the <a
+								class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA
+								Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With <a class="noLink" href="https://huanzhehu.com/">Huanzhe Hu</a> in the <a class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With <a class="noLink" href="https://jinhakanglab.github.io/">Jinha Kang</a> in the <a
+								class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA
+								Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Critic | <a class="noLink" href="https://www.upc.edu/en">Universitat Politècnica de Catalunya</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With Sasha Magallona in the <a class="noLink" href="https://www.upc.edu/en/masters/advanced-studies-in-design-barcelona-mbdesign">Design, Innovation, and Technology program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With <a class="noLink" href="https://huanzhehu.com/">Huanzhe Hu</a> in the <a class="noLink"
+								href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With Jinhong Cai in the <a class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Critic | <a class="noLink" href="https://www.upc.edu/en">Universitat Politècnica de
+								Catalunya</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With Sasha Magallona in the <a class="noLink"
+								href="https://www.upc.edu/en/masters/advanced-studies-in-design-barcelona-mbdesign">Design,
+								Innovation, and Technology program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With Ting-Lung Chang in the <a class="noLink" href="http://id.risd.edu/midhome">Industrial Design MID Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With Jinhong Cai in the <a class="noLink"
+								href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2023</p>
-							<p>With Ray Sun in the <a class="noLink" href="http://id.risd.edu/midhome">Industrial Design MID Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With Ting-Lung Chang in the <a class="noLink" href="http://id.risd.edu/midhome">Industrial
+								Design MID Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2022</p>
-							<p>With Yuhan Ma in the <a class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2023</p>
+						<p>With Ray Sun in the <a class="noLink" href="http://id.risd.edu/midhome">Industrial Design MID
+								Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2022</p>
-							<p>With Jazzmynn Hong in the <a class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2022</p>
+						<p>With Yuhan Ma in the <a class="noLink"
+								href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2022</p>
-							<p>With <a class="noLink" href="https://www.travesssmalley.com/">Travess Smalley</a> in the <a class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2022</p>
+						<p>With Jazzmynn Hong in the <a class="noLink"
+								href="https://www.risd.edu/academics/digital-media">Digital + Media MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Mentor | <a class="noLink" href="https://tisch.nyu.edu/itp">Tisch School of the Arts, NYU</a></h2>
-							<p class="subDetails">Fall 2021</p>
-							<p>Tisch mentorship program mentor for <a class="noLink" href="https://www.cy-kim.com/">Cy Kim</a> in the Interactive Telecommunications Program (<a class="noLink" href="https://tisch.nyu.edu/itp">ITP</a>).</p>
-						</article>
+					<article>
+						<h2>Thesis Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2022</p>
+						<p>With <a class="noLink" href="https://www.travesssmalley.com/">Travess Smalley</a> in the <a
+								class="noLink" href="https://www.risd.edu/academics/digital-media">Digital + Media MFA
+								Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2021</p>
-							<p>With <a class="noLink" href="https://majed.studio/">Majed Bou Ghanem</a> in the <a class="noLink" href="https://www.risd.edu/academics/industrial-design/">Industrial Design MID Program</a>.</p>
-						</article>
+					<article>
+						<h2>Mentor | <a class="noLink" href="https://tisch.nyu.edu/itp">Tisch School of the Arts,
+								NYU</a></h2>
+						<p class="subDetails">Fall 2021</p>
+						<p>Tisch mentorship program mentor for <a class="noLink" href="https://www.cy-kim.com/">Cy
+								Kim</a> in the Interactive Telecommunications Program (<a class="noLink"
+								href="https://tisch.nyu.edu/itp">ITP</a>).</p>
+					</article>
 
-						<article>
-							<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2021</p>
-							<p>With <a class="noLink" href="https://www.nenivrajtak.net/">Kathryn Jarvinen</a> in the <a class="noLink" href="https://dm.risd.edu/">Digital + Media MFA Program</a>.</p>
-						</article>
+					<article>
+						<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2021</p>
+						<p>With <a class="noLink" href="https://majed.studio/">Majed Bou Ghanem</a> in the <a
+								class="noLink" href="https://www.risd.edu/academics/industrial-design/">Industrial
+								Design MID Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Thesis Mentor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Spring 2021</p>
-							<p>With Yi Yang, Hana Al-Saadi, and Ndivhuho Rasengani in the <a class="noLink" href="https://www.risd.edu/academics/sculpture/graduate/">Sculpture MFA Program</a>.</p>
-						</article>
-						
-					</div>
-					<div class="clear"></div>
-				</section>
+					<article>
+						<h2>Thesis Advisor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2021</p>
+						<p>With <a class="noLink" href="https://www.nenivrajtak.net/">Kathryn Jarvinen</a> in the <a
+								class="noLink" href="https://dm.risd.edu/">Digital + Media MFA Program</a>.</p>
+					</article>
 
-				<section>
-					<div class="sectionTitle">
-						<h1>Talks and Critique</h1>
-					</div>
-					
-					<div class="sectionContent">
+					<article>
+						<h2>Thesis Mentor | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Spring 2021</p>
+						<p>With Yi Yang, Hana Al-Saadi, and Ndivhuho Rasengani in the <a class="noLink"
+								href="https://www.risd.edu/academics/sculpture/graduate/">Sculpture MFA Program</a>.</p>
+					</article>
 
-						<article>
-							<h2>Artist Talk | <a class="noLink" href="https://engineering.nyu.edu/academics/programs/integrated-design-media-ms">NYU IDM</a></h2>
-							<p class="subDetails">April 2024</p>
-							<p>Artist talk at NYU Integrated Design and Media M.S. program for the course <i>Advanced Design Media: Interaction Design Studio</i> taught by Camila A. Morales and Tim O'Keefe.
-						</article>
+				</div>
+				<div class="clear"></div>
+			</section>
 
-						<article>
-							<h2>Artist Talk | <a class="noLink" href="https://www.hesge.ch/head/en">HEAD – Genève</a></h2>
-							<p class="subDetails">October 2023</p>
-							<p>Artist talk at Geneva University of Art and Design / HEAD – Genève's <a class="noLink" href="https://www.hesge.ch/head/formations-recherche/master-en-media-design">Masters in Media Design Program</a> as part of the Creative Coding Series.</p>
-						</article>
+			<section>
+				<div class="sectionTitle">
+					<h1>Talks and Critique</h1>
+				</div>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a> and Hyundai Research Lab</h2>
-							<p class="subDetails">May 2022</p>
-							<p>Guest critic for Hyundai Research Lab course Robotics for the Pluriverse taught by <a class="noLink" href="http://paulagaetanoadi.com/">Paula Gaetano-Adi</a></p>
-						</article>
+				<div class="sectionContent">
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">May 2022</p>
-							<p>Guest critic for <a class="noLink" href="https://www.risd.edu/academics/industrial-design/">Industrial Design</a> senior studio final critique.</p>
-						</article>
+					<article>
+						<h2>Artist Talk | <a class="noLink"
+								href="https://engineering.nyu.edu/academics/programs/integrated-design-media-ms">NYU
+								IDM</a></h2>
+						<p class="subDetails">April 2024</p>
+						<p>Artist talk at NYU Integrated Design and Media M.S. program for the course <i>Advanced Design
+								Media: Interaction Design Studio</i> taught by Camila A. Morales and Tim O'Keefe.
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">May 2022</p>
-							<p>Guest critic for <a class="noLink" href="https://www.risd.edu/academics/industrial-design/">Industrial Design</a> graduate student <a class="noLink" href="https://aaronwright.co/">Aaron Wright</a>'s thesis defense.</p>
-						</article>
+					<article>
+						<h2>Artist Talk | <a class="noLink" href="https://www.hesge.ch/head/en">HEAD – Genève</a></h2>
+						<p class="subDetails">October 2023</p>
+						<p>Artist talk at Geneva University of Art and Design / HEAD – Genève's <a class="noLink"
+								href="https://www.hesge.ch/head/formations-recherche/master-en-media-design">Masters in
+								Media Design Program</a> as part of the Creative Coding Series.</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://tisch.nyu.edu/itp">NYU ITP</a></h2>
-							<p class="subDetails">March 2022</p>
-							<p>Guest critic for ITP graduate thesis students.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a> and Hyundai Research
+							Lab</h2>
+						<p class="subDetails">May 2022</p>
+						<p>Guest critic for Hyundai Research Lab course Robotics for the Pluriverse taught by <a
+								class="noLink" href="http://paulagaetanoadi.com/">Paula Gaetano-Adi</a></p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Dec 2021</p>
-							<p>Guest critic for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> first year students.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">May 2022</p>
+						<p>Guest critic for <a class="noLink"
+								href="https://www.risd.edu/academics/industrial-design/">Industrial Design</a> senior
+							studio final critique.</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Dec 2021</p>
-							<p>Guest critic for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> thesis students.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">May 2022</p>
+						<p>Guest critic for <a class="noLink"
+								href="https://www.risd.edu/academics/industrial-design/">Industrial Design</a> graduate
+							student <a class="noLink" href="https://aaronwright.co/">Aaron Wright</a>'s thesis defense.
+						</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">May 2021</p>
-							<p>Guest critic for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> thesis projects.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://tisch.nyu.edu/itp">NYU ITP</a></h2>
+						<p class="subDetails">March 2022</p>
+						<p>Guest critic for ITP graduate thesis students.</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">May 2021</p>
-							<p>Guest critic for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> first year final projects.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Dec 2021</p>
+						<p>Guest critic for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> first year
+							students.</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">February 2021</p>
-							<p>Guest critic for <b>Hacking the Smart Home</b> in the department of Industrial Design. Taught by <a class="noLink" href="https://majed.studio/">Majed Bou Ghanem</a> and Zhuoyan Xie.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Dec 2021</p>
+						<p>Guest critic for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> thesis
+							students.</p>
+					</article>
 
-						<article>
-							<h2>Artist Talk | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">Wintersession 2021</p>
-							<p>Guest artist talk in SCULP-1526 <b>The Body Extended</b> course taught by Yi Yang and Hana Al-Saadi in the department of Sculpture.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">May 2021</p>
+						<p>Guest critic for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> thesis
+							projects.</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://tisch.nyu.edu/itp">NYU ITP</a></h2>
-							<p class="subDetails">March 2020</p>
-							<p>Guest critic for ITP graduate thesis mid-term presentations.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">May 2021</p>
+						<p>Guest critic for <a class="noLink" href="https://dm.risd.edu/">Digital + Media</a> first year
+							final projects.</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">December 2019</p>
-							<p>Guest critic for Computation Technology and Culture: Concentration Project.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">February 2021</p>
+						<p>Guest critic for <b>Hacking the Smart Home</b> in the department of Industrial Design. Taught
+							by <a class="noLink" href="https://majed.studio/">Majed Bou Ghanem</a> and Zhuoyan Xie.</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
-							<p class="subDetails">May 2019</p>
-							<p>Guest critic for Creative Applications Of Machine Learning in the department of Industrial Design. Taught by Seth Kranzler.</p>
-						</article>
+					<article>
+						<h2>Artist Talk | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">Wintersession 2021</p>
+						<p>Guest artist talk in SCULP-1526 <b>The Body Extended</b> course taught by Yi Yang and Hana
+							Al-Saadi in the department of Sculpture.</p>
+					</article>
 
-						<article>
-							<h2>Guest Critic | <a class="noLink" href="https://tisch.nyu.edu/itp">NYU ITP</a></h2>
-							<p class="subDetails">March 2019</p>
-							<p>Guest critic for ITP graduate thesis mid-term presentations.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://tisch.nyu.edu/itp">NYU ITP</a></h2>
+						<p class="subDetails">March 2020</p>
+						<p>Guest critic for ITP graduate thesis mid-term presentations.</p>
+					</article>
 
-						<article>
-							<h2>Visiting Scholar | <a class="noLink" href="https://shanghai.nyu.edu/academics/majors/interactive-media">NYU Shanghai</a></h2>
-							<p class="subDetails">May 2016</p>
-							<p>Worked with undergraduate students in the Interactive Media Arts program (IMA), teaching physical computing and aerial robotics. This visit included an artist talk.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">December 2019</p>
+						<p>Guest critic for Computation Technology and Culture: Concentration Project.</p>
+					</article>
 
-						<article>
-							<h2>Graduate Thesis Public Presentation | NYU ITP</h2>
-							<p class="subDetails">May 2015</p>
-							<p>Obfuscation tools and techniques for a more just world. Find a full recording of <a class="noLink" href="https://vimeo.com/137208810">the presentation</a> on vimeo.</p>
-						</article>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://www.risd.edu/">RISD</a></h2>
+						<p class="subDetails">May 2019</p>
+						<p>Guest critic for Creative Applications Of Machine Learning in the department of Industrial
+							Design. Taught by Seth Kranzler.</p>
+					</article>
 
-					</div>
-					<div class="clear"></div>
-				</section>
+					<article>
+						<h2>Guest Critic | <a class="noLink" href="https://tisch.nyu.edu/itp">NYU ITP</a></h2>
+						<p class="subDetails">March 2019</p>
+						<p>Guest critic for ITP graduate thesis mid-term presentations.</p>
+					</article>
 
-				
-				
-				
-				<section>
-					<div class="sectionTitle">
-						<h1>Tools</h1>
-					</div>
-					
-					<div class="sectionContent">
-						<ul class="keySkills">
-							<li>KiCAD</li>
-							<li>EagleCAD</li>
-							<li>Arduino</li>
-							<li>Raspberry Pi</li>
-							<li>JavaScript</li>
-							<li>Processing</li>
-							<li>Shell Scripting</li>
-							<li>HTML + CSS</li>
-							<li>Drones/UAVs</li>
-							<li>Adobe CC</li>
-							<li>Node.js</li>
-							<li>MongoDB</li>
-							<li>Meteor</li>
-							<li>Unity</li>
-							<li>P5.js</li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-				</section>
+					<article>
+						<h2>Visiting Scholar | <a class="noLink"
+								href="https://shanghai.nyu.edu/academics/majors/interactive-media">NYU Shanghai</a></h2>
+						<p class="subDetails">May 2016</p>
+						<p>Worked with undergraduate students in the Interactive Media Arts program (IMA), teaching
+							physical computing and aerial robotics. This visit included an artist talk.</p>
+					</article>
 
-				<section>
-					<div class="sectionTitle">
-						<h1>Exhibitions, Events, and Honors</h1>
-					</div>
-					
-					<div class="sectionContent">
-						<ul class="exhibitions">
-							<li><a class="noLink" href="https://grayarea.org/event/art-hack-day-dethrone/">Art Hack Day: Dethrone</a> | Gray Area, San Francisco, CA 2024</li>
-							<li><a class="noLink" href="https://vermontstudiocenter.org/calendar/2023/12/9/dynamism-studios-at-vsc-artists">Dynamism</a>, Vermont Studio Center | Johnson, VT 2024</li>
-							<li><a class="noLink" href="https://thewrong.org/PrintScreen">Print Screen</a>, The Wrong Biennale | Online 2023</li>
-							<li><a class="noLink" href="https://printscreen.show/artists/">Print Screen</a>, Icebox Project Space | Philadelphia, PA 2023</li>
-							<li>Vermont Studio Center Studio Grant Winner | VT 2023</li>
-							<li><a class="noLink" href="https://fletcherbach.com/ARCHIVING-IN-THE-AGE-OF-IM-PERMANENCE">Archiving in the Age of [Im]permanence</a> | Brown University, Providence, RI 2022 (Co-organizer)</li>
-							<li>Afterimages | Online 2020 (Producer)</li>
-							<li>Stupid Hackathon | NYC 2015, 2016, 2017</li>
-							<li>Spectral Event, Invited Participant | New Rochelle, NY 2017</li>
-		                    <li><a class="noLink" href="http://arthackday.net/events/per-capita">Sight and Sound Festival: Art Hack Day</a> | Montreal, QC 2016</li>
-							<li><a class="noLink" href="http://yami-ichi.biz/nyc/">Internet Yami-ichi</a> | NYC 2015</li>
-							<li>Terminal Verbosity | NYC 2015</li>
-							<li>ITP Thesis Week | NYC 2015</li>
-							<li>The Museum of the Moving Image | NYC 2014</li>
-							<li>ITP Student Showcase | NYC 2014, 2015</li>
-							<li>Captivated by Her with Vice Media | NYC 2014</li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-				</section>
+					<article>
+						<h2>Graduate Thesis Public Presentation | NYU ITP</h2>
+						<p class="subDetails">May 2015</p>
+						<p>Obfuscation tools and techniques for a more just world. Find a full recording of <a
+								class="noLink" href="https://vimeo.com/137208810">the presentation</a> on vimeo.</p>
+					</article>
 
-				<script>
-					console.log("░░▒▓░   ░░▒▓      ░░▒▓");
-					console.log("░░▒▓░   ░░▒▓          ");
-					console.log("░░▒▓░   ░░▒▓      ░░▒▓");
-					console.log("░░▒▓▓▓▓▓▓▓▓▓      ░░▒▓");
-					console.log("░░▒▓░   ░░▒▓      ░░▒▓");
-					console.log("░░▒▓░   ░░▒▓      ░░▒▓");
-					console.log("░░▒▓░   ░░▒▓      ░░▒▓");
-				</script>
-				
-			</div>
+				</div>
+				<div class="clear"></div>
+			</section>
+
+
+
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Tools</h1>
+				</div>
+
+				<div class="sectionContent">
+					<ul class="keySkills">
+						<li>KiCAD</li>
+						<li>EagleCAD</li>
+						<li>Arduino</li>
+						<li>Raspberry Pi</li>
+						<li>JavaScript</li>
+						<li>Processing</li>
+						<li>Shell Scripting</li>
+						<li>HTML + CSS</li>
+						<li>Drones/UAVs</li>
+						<li>Adobe CC</li>
+						<li>Node.js</li>
+						<li>MongoDB</li>
+						<li>Meteor</li>
+						<li>Unity</li>
+						<li>P5.js</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</section>
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Exhibitions, Events, and Honors</h1>
+				</div>
+
+				<div class="sectionContent">
+					<ul class="exhibitions">
+						<li><a class="noLink" href="https://grayarea.org/event/art-hack-day-dethrone/">Art Hack Day:
+								Dethrone</a> | Gray Area, San Francisco, CA 2024</li>
+						<li><a class="noLink"
+								href="https://vermontstudiocenter.org/calendar/2023/12/9/dynamism-studios-at-vsc-artists">Dynamism</a>,
+							Vermont Studio Center | Johnson, VT 2024</li>
+						<li><a class="noLink" href="https://thewrong.org/PrintScreen">Print Screen</a>, The Wrong
+							Biennale | Online 2023</li>
+						<li><a class="noLink" href="https://printscreen.show/artists/">Print Screen</a>, Icebox Project
+							Space | Philadelphia, PA 2023</li>
+						<li>Vermont Studio Center Studio Grant Winner | VT 2023</li>
+						<li><a class="noLink"
+								href="https://fletcherbach.com/ARCHIVING-IN-THE-AGE-OF-IM-PERMANENCE">Archiving in the
+								Age of [Im]permanence</a> | Brown University, Providence, RI 2022 (Co-organizer)</li>
+						<li>Afterimages | Online 2020 (Producer)</li>
+						<li>Stupid Hackathon | NYC 2015, 2016, 2017</li>
+						<li>Spectral Event, Invited Participant | New Rochelle, NY 2017</li>
+						<li><a class="noLink" href="http://arthackday.net/events/per-capita">Sight and Sound Festival:
+								Art Hack Day</a> | Montreal, QC 2016</li>
+						<li><a class="noLink" href="http://yami-ichi.biz/nyc/">Internet Yami-ichi</a> | NYC 2015</li>
+						<li>Terminal Verbosity | NYC 2015</li>
+						<li>ITP Thesis Week | NYC 2015</li>
+						<li>The Museum of the Moving Image | NYC 2014</li>
+						<li>ITP Student Showcase | NYC 2014, 2015</li>
+						<li>Captivated by Her with Vice Media | NYC 2014</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</section>
+
+			<script>
+				console.log("░░▒▓░   ░░▒▓      ░░▒▓");
+				console.log("░░▒▓░   ░░▒▓          ");
+				console.log("░░▒▓░   ░░▒▓      ░░▒▓");
+				console.log("░░▒▓▓▓▓▓▓▓▓▓      ░░▒▓");
+				console.log("░░▒▓░   ░░▒▓      ░░▒▓");
+				console.log("░░▒▓░   ░░▒▓      ░░▒▓");
+				console.log("░░▒▓░   ░░▒▓      ░░▒▓");
+			</script>
+
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>
