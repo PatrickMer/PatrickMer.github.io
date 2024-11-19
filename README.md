@@ -1,3 +1,1 @@
-## cv/resume for Fletcher Bach, MIT Licence - use at will! 
-
-
+## CV for Patrick Mermelstein Lyons 
